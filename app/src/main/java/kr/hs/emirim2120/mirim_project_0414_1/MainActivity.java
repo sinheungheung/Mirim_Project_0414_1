@@ -29,7 +29,16 @@ public class MainActivity extends AppCompatActivity {
 
         // 체크박스를 선택함에 따라 화면에 나타나고 안 나타나는 것을 표시하기 위해서
         checkStart.setOnCheckedChangeListener(checkListener);
+        Button btnFinish = findViewById(R.id.btn_finish);
+        btnFinish.setOnClickListener(btnListener);
     }
+    View.OnClickListener btnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            finish();
+        }
+
+    };
     RadioGroup.OnCheckedChangeListener rgListener = new RadioGroup.OnCheckedChangeListener() {
         @Override
         // 동물을 선택하면 사진이 바껴서 보인다
